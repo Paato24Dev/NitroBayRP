@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NitroBay RP - Tienda</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/tienda.css">
+    <!-- Fonts y Scripts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Teko:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c12c24896b.js" crossorigin="anonymous"></script>
+</head>
+<body class="tienda-page">
+    <header>
+        <a href="index.html" class="logo-link">
+            <img src="imagenes/logo.png" alt="Logo de NitroBay RP" class="logo-img">
+            <span class="logo-text">NitroBay RP</span>
+        </a>
+        <nav>
+            <a href="index.html" class="nav-link">INICIO</a>
+            <a href="tienda.html" class="nav-link activo">TIENDA</a>
+            <a href="normativas.html" class="nav-link">NORMATIVAS</a>
+        </nav>
+        <a href="#" class="btn-header">ENTRAR</a>
+    </header>
+
+    <div class="page-title-header">
+        <h1>Tienda Oficial de NitroBay</h1>
+        <p class="page-subtitle">Bienvenido a nuestra tienda oficial <i class="fa-solid fa-star"></i></p>
+    </div>
+
+    <div class="store-container">
+        <div class="store-nav">
+            <button class="store-nav-item active" data-category="autos"><i class="fa-solid fa-car"></i><span>Autos</span></button>
+            <button class="store-nav-item" data-category="helicopteros"><i class="fa-solid fa-helicopter"></i><span>Helicópteros</span></button>
+            <button class="store-nav-item" data-category="hq"><i class="fa-solid fa-building"></i><span>HQs</span></button>
+            <button class="store-nav-item" data-category="casas"><i class="fa-solid fa-house-chimney"></i><span>Casas/Mansiones</span></button>
+            <button class="store-nav-item" data-category="locales"><i class="fa-solid fa-shop"></i><span>Tiendas/Locales</span></button>
+            <button class="store-nav-item" data-category="barcos"><i class="fa-solid fa-ship"></i><span>Barcos</span></button>
+        </div>
+
+        <div class="products-container">
+            <!-- Categoría Autos -->
+            <div id="autos" class="products-category active">
+                <h2 class="category-title">Vehículos Terrestres</h2>
+                <div class="products-grid">
+                    <div class="product-card"><img src="imagenes/auto1.jpg" alt="Deportivo" class="product-image"><h3 class="product-name">Deportivo de Lujo</h3><div class="product-price"><span class="price-ars">$250,000 ARS</span><span class="price-usd">$25.00 USD</span></div><a href="#" class="btn btn-primary small-btn">Comprar</a></div>
+                    <div class="product-card"><img src="imagenes/auto2.png" alt="Todoterreno" class="product-image"><h3 class="product-name">Todoterreno Blindado</h3><div class="product-price"><span class="price-ars">$400,000 ARS</span><span class="price-usd">$40.00 USD</span></div><a href="#" class="btn btn-primary small-btn">Comprar</a></div>
+                    <div class="product-card"><img src="imagenes/auto3.jpg" alt="Superdeportivo" class="product-image"><h3 class="product-name">Superdeportivo X</h3><div class="product-price"><span class="price-ars">$600,000 ARS</span><span class="price-usd">$60.00 USD</span></div><a href="#" class="btn btn-primary small-btn">Comprar</a></div>
+                </div>
+            </div>
+            <!-- Categoría Helicópteros -->
+            <div id="helicopteros" class="products-category"><h2 class="category-title">Vehículos Aéreos</h2><div class="products-grid"><div class="product-card"><img src="imagenes/helicoptero1.png" alt="Helicóptero" class="product-image"><h3 class="product-name">Helicóptero Rápido</h3><div class="product-price"><span class="price-ars">$750,000 ARS</span><span class="price-usd">$75.00 USD</span></div><a href="#" class="btn btn-primary small-btn">Comprar</a></div></div></div>
+            <!-- Categoría HQs -->
+            <div id="hq" class="products-category"><h2 class="category-title">Cuarteles Generales (HQs)</h2><div class="products-grid"><p>Próximamente disponibles.</p></div></div>
+            <!-- Categoría Casas -->
+            <div id="casas" class="products-category"><h2 class="category-title">Casas y Mansiones</h2><div class="products-grid"><div class="product-card"><img src="imagenes/casa1.png" alt="Mansión" class="product-image"><h3 class="product-name">Mansión en la Colina</h3><div class="product-price"><span class="price-ars">$5,000,000 ARS</span><span class="price-usd">$500.00 USD</span></div><a href="#" class="btn btn-primary small-btn">Comprar</a></div></div></div>
+            <!-- Categoría Locales -->
+            <div id="locales" class="products-category"><h2 class="category-title">Tiendas y Locales Comerciales</h2><div class="products-grid"><p>Próximamente disponibles.</p></div></div>
+            <!-- Categoría Barcos -->
+            <div id="barcos" class="products-category"><h2 class="category-title">Vehículos Marítimos</h2><div class="products-grid"><p>Próximamente disponibles.</p></div></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="social-icons"><a href="#"><i class="fa-brands fa-discord"></i></a><a href="#"><i class="fa-brands fa-tiktok"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a></div>
+        <p>&copy; 2025 NitroBay RP. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navItems = document.querySelectorAll('.store-nav-item');
+            const categories = document.querySelectorAll('.products-category');
+            navItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const categoryId = item.getAttribute('data-category');
+                    navItems.forEach(nav => nav.classList.remove('active'));
+                    categories.forEach(cat => cat.classList.remove('active'));
+                    item.classList.add('active');
+                    document.getElementById(categoryId).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
