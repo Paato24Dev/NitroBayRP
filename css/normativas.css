@@ -1,0 +1,160 @@
+/* ======================================================
+   ESTILOS ESPECÍFICOS PARA LA PÁGINA DE NORMATIVAS
+   ====================================================== */
+
+body.normativas-page {
+    background-color: var(--color-fondo); /* Fondo oscuro para toda la página */
+}
+
+.page-title-header {
+    padding-top: 100px;
+    background-color: var(--color-fondo);
+    color: var(--color-blanco);
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.page-title-header h1 {
+    font-family: var(--fuente-titulos);
+    font-size: 4em;
+    text-shadow: 0 0 10px var(--color-primario);
+}
+
+.rules-container {
+    display: flex;
+    max-width: 1400px;
+    margin: 40px auto;
+    gap: 30px;
+    align-items: flex-start;
+    padding: 0 20px;
+}
+
+/* Sidebar */
+.rules-sidebar {
+    width: 280px;
+    flex-shrink: 0;
+    background: #1a1a1a;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: sticky;
+    top: 110px;
+}
+.rules-sidebar ul { list-style: none; }
+.rules-sidebar ul li a {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    text-decoration: none;
+    color: #ccc;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    margin-bottom: 5px;
+    border-left: 3px solid transparent;
+}
+.rules-sidebar ul li a i {
+    margin-right: 15px;
+    width: 20px;
+    text-align: center;
+    color: #888;
+    transition: color 0.2s ease;
+}
+.rules-sidebar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--color-blanco);
+}
+.rules-sidebar ul li a:hover i {
+    color: var(--color-primario);
+}
+.rules-sidebar ul li a.active {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    font-weight: 700;
+    border-left: 3px solid var(--color-blanco);
+}
+.rules-sidebar ul li a.active i {
+    color: var(--color-blanco);
+}
+
+/* Contenido Principal */
+.rules-content { flex: 1; position: relative; }
+.content-section {
+    display: none;
+    background: #1a1a1a;
+    padding: 30px 40px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #eee;
+}
+.content-section.active { display: block; }
+
+/* Títulos y contenido dentro de las secciones */
+.rules-content .section-title-chip {
+    display: inline-block;
+    padding: 8px 25px;
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    border-radius: 50px;
+    font-size: 1.8em;
+    margin-bottom: 25px;
+    font-family: var(--fuente-titulos);
+    letter-spacing: 1px;
+}
+.rules-content h3.section-title-chip {
+    font-size: 1.5em;
+    margin-top: 40px;
+}
+.rules-content h4 {
+    font-size: 1.3em;
+    color: var(--color-primario);
+    margin-top: 25px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.rules-content p, .rules-content li { line-height: 1.8; margin-bottom: 12px; color: #ccc; }
+.rules-content ul { list-style-type: disc; padding-left: 25px; }
+.rules-content strong { color: var(--color-blanco); }
+
+/* Buscador (Fijo) */
+.rules-search-wrapper { position: sticky; top: 90px; z-index: 50; padding-bottom: 20px; background: var(--color-fondo); }
+.rules-search { background: #1a1a1a; border-radius: 10px; padding: 15px; border: 1px solid rgba(255, 255, 255, 0.1); }
+.search-input-wrap { display: flex; align-items: center; background: var(--color-fondo); border: 1px solid #444; border-radius: 8px; padding: 5px 10px; }
+#rules-search-input { flex-grow: 1; border: none; outline: none; padding: 8px; font-size: 1em; background: transparent; color: var(--color-blanco); }
+.search-clear { background: none; border: none; cursor: pointer; font-size: 1.2em; color: #999; }
+.search-meta { display: flex; justify-content: space-between; align-items: center; margin-top: 10px; font-size: 0.9em; color: #888; }
+.search-scope input { accent-color: var(--color-primario); }
+
+/* Resultados de búsqueda */
+.search-results-list { margin-top: 20px; }
+.search-result-item { display: block; padding: 15px; border-radius: 8px; background: #222; margin-bottom: 10px; text-decoration: none; color: #ccc; border-left: 4px solid var(--color-primario); transition: background-color 0.3s; }
+.search-result-item:hover { background-color: #333; }
+.result-section { font-weight: bold; color: var(--color-primario); display: block; margin-bottom: 5px; }
+
+/* Cajas de Alertas y Reglas */
+.alert-box { padding: 15px; border-radius: 8px; margin: 20px 0; border-left: 5px solid; }
+.alert-box p { margin-bottom: 0; }
+.alert-box i { margin-right: 10px; }
+.alert-box.warning { background-color: rgba(255, 193, 7, 0.1); border-color: #ffc107; color: #ffc107; }
+.alert-box.tip { background-color: rgba(13, 202, 240, 0.1); border-color: #0dcaf0; color: #0dcaf0; }
+.alert-box.info { background-color: rgba(13, 110, 253, 0.1); border-color: #0d6efd; color: #0d6efd; }
+.rule-box { background-color: var(--color-fondo); padding: 20px; border-radius: 8px; margin: 20px 0; border: 1px solid rgba(255, 255, 255, 0.1); }
+.rule-box.two-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.rule-list { list-style: none; padding-left: 0; }
+.rule-list li { background: var(--color-fondo); padding: 15px; border-radius: 8px; border-left: 3px solid var(--color-primario); margin-bottom: 10px; }
+
+/* Grid de Sanciones */
+.sanctions-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 15px; }
+.sanction-card { background: var(--color-fondo); padding: 20px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.1); }
+.sanction-card h5 { color: #ffc107; font-family: var(--fuente-titulos); font-size: 1.4em; }
+.sanction-card.danger h5 { color: #dc3545; }
+.sanction-card ul { padding-left: 20px; }
+
+/* Responsive para Normativas */
+@media (max-width: 992px) {
+    .rules-container { flex-direction: column; }
+    .rules-sidebar { width: 100%; position: static; margin-bottom: 30px; }
+    .rules-search-wrapper { top: 150px; }
+    .rule-box.two-columns { grid-template-columns: 1fr; }
+}
